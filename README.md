@@ -1,2 +1,2 @@
 # vehicles
-This is for learning Puthon and GIT
+This is for learning Python and GIT
