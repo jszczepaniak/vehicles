@@ -1,12 +1,12 @@
 from gear import energy_sources
-import abc
+from abc import ABC
 from gear import fuel_units
 
 class Fuel_error(Exception):
     def __init__(self, *args: object) -> None:
         super().__init__(*args)
 
-class Vehicle(abc):
+class Vehicle(ABC):
     def __init__(self, number_of_wheels: int, fuel_type: list) -> None:
         self.number_of_wheels = number_of_wheels
         self.fuel_type = fuel_type

@@ -1,7 +1,7 @@
 from gear import fuel_units
-import abc
+from abc import ABC
 
-class Generic_energy_source(abc):
+class Generic_energy_source(ABC):
     def __init__(self, supported_fuel) -> None:
         if supported_fuel in fuel_units:
             self.supported_fuel = supported_fuel
