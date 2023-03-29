@@ -1,4 +1,4 @@
-from fuel_units import fuel_units
+from gear import fuel_units
 import abc
 
 class Generic_energy_source(abc):

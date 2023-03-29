@@ -1,6 +1,6 @@
-import energy_sources
+from gear import energy_sources
 import abc
-from fuel_units import fuel_units
+from gear import fuel_units
 
 class Fuel_error(Exception):
     def __init__(self, *args: object) -> None:
@@ -15,9 +15,11 @@ class Vehicle(abc):
     
     def go_forward(self) -> None:
         print("I'm going forward!")
+        # TODO use fuel
     
     def go_backward(self) -> None:
         print("I'm going backward!")
+        # TODO use fuel
 
     def add_fuel(self, fuel_type: str, value: int) -> None:
         try:
@@ -35,3 +37,4 @@ class Vehicle(abc):
 class Bicycle(Vehicle):
     def __init__(self) -> None:
         super().__init__(2, ["sausage"])
+        self.energy_source.append(energy_sources.Muscles())
