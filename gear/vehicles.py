@@ -1,6 +1,6 @@
 from gear import energy_sources
 from abc import ABC
-from gear import fuel_units
+from gear.fuel_units import fuel_units
 
 class Fuel_error(Exception):
     def __init__(self, *args: object) -> None:
@@ -29,6 +29,7 @@ class Vehicle(ABC):
             print("This vehicle cannot use that fuel!")
         else:
             print("%s %s of %s has been added." %(value, fuel_units[fuel_type], fuel_type))
+            #TODO add fuel
         finally:
             print("Leaving the gas station")
         
