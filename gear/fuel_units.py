@@ -1,5 +1,5 @@
 fuel_units = {
     "sausage": "grams",
-    "gas": "litres"
+    "gas": "litres",
     "electricity": "percentage"
 }
